@@ -35,4 +35,20 @@ const renderPokemon = async (pokemon) => {
 
 pokemon_form.addEventListener("sunmit", (event)=>{
     event.preventDefault();
+    console.log("enviando formulario", pokemon_input.value);
+    renderPokemon(pokemon_input.value.toLowerCase())
+    Input.value = "";
 })
+
+pokemon_prev.addEventListener("click", ()=>{
+    if(searchPokemon > 1){
+        searchPokemon-=1
+        renderPokemon(searchPokemon)
+    }
+})
+
+pokemon_next.addEventListener("click", ()=>{
+    searchPokemon +=1
+    renderPokemon(searchPokemon)
+})
+renderPokemon(searchPokemon)
