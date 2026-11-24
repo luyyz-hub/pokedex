@@ -32,3 +32,7 @@ const renderPokemon = async (pokemon) => {
 }
     
     }
+
+pokemon_form.addEventListener("sunmit", (event)=>{
+    event.preventDefault();
+})
